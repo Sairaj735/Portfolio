@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional for additional styles -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">My Video Editing and photo editing Portfolio</h1>
+            <button id="mobile-menu-button" class="md:hidden text-lg">Menu</button>
+            <nav id="mobile-menu" class="hidden md:flex space-x-4">
+                <a href="#about" class="hover:underline">About Me</a>
+                <a href="#portfolio" class="hover:underline">My Work</a>
+                <a href="#contact" class="hover:underline">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold">About Me</h2>
+            <p class="mt-4 px-4 text-gray-700">I am a passionate video editor with a year of experience in creating engaging video content. I specialize in editing promotional videos, vlogs, and short films. I am proficient in various editing software and always eager to learn new techniques.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-10 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold">My Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-white p-4 shadow rounded portfolio-item">
+                    <h3 class="font-bold">Project 1</h3>
+                    <img src="C:\Users\Admin\Downloads/1f712df01d01b06640805d141e7460bc.jpg" alt="Project 1" class="mt-2 cursor-pointer" onclick="openModal('video1.mp4')">
+                </div>
+                <div class="bg-white p-4 shadow rounded portfolio-item">
+                    <h3 class="font-bold">Project 2</h3>
+                    <img src="C:\Users\Admin\Downloads/ganesh-utsav-banner-background-image-11660038518voctnojwa0.png" alt="Project 2" class="mt-2 cursor-pointer" onclick="openModal('video2.mp4')">
+                </div>
+                <div class="bg-white p-4 shadow rounded portfolio-item">
+                    <h3 class="font-bold">Project 3</h3>
+                    <img src="C:\Users\Admin\Downloads/ganesh-sankashti-chaturthi-banner-photo-editing-background-11661156450nlozn.jpg" alt="Project 3" class="mt-2 cursor-pointer" onclick="openModal('video3.mp4')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+     <!-- Modal for Video Viewing -->
+     <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center hidden">
+        <video id="modal-video" class="max-w-full max-h-full" controls>
+            <source id="video-source" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button onclick="closeModal()" class="absolute top-4 right-4 bg-red-600 text-white p-2 rounded">Close</button>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold">Contact Me</h2>
+            <form id="contactForm" class="mt-4">
+                <input type="text" id="name" placeholder="Your Name" class="border rounded p-2 w-full md:w-1/3 mx-auto mb-4" required>
+                <input type="email" id="email" placeholder="Your Email" class="border rounded p-2 w-full md:w-1/3 mx-auto mb-4" required>
+                <textarea id="message" placeholder="Your Message" class="border rounded p-2 w-full md:w-1/3 mx-auto mb-4" rows="4" required></textarea>
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2024 My Video Editing Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
